@@ -1,6 +1,6 @@
 const express =  require('express')
 
-const { getitems, getitem, createitem } = require('../controllers/controlstore')
+const { getitems, getitem, createitem, deleteone, updateitem } = require('../controllers/controlstore')
 
 const routes = express.Router()
 
@@ -14,6 +14,14 @@ routes.get('/:id',
 
 routes.post('/',
     createitem
+)
+
+routes.delete('/:id',
+    deleteone  
+)
+
+routes.patch('/:id',()=>
+    updateitem
 )
 
 module.exports = routes

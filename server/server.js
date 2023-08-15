@@ -6,6 +6,10 @@ const { default:mongoose } = require('mongoose')
 
 const storeroutes =  require('./routes/storeroutes')
 
+const systemroutes = require('./routes/system')
+
+const cors = require('cors')
+
 const app = express()
 
 app.use(express.json())
@@ -16,6 +20,7 @@ app.use('/',(req,res,next) => {
 })
 
 app.use('/api/items', storeroutes)
+app.use('/api/system', systemroutes)
 
 mongoose.connect(
     process.env.MONGOOSE

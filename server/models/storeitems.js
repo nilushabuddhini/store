@@ -19,6 +19,9 @@ const details = new schema({
     phone:{
         type:Number,
         required:true
+    },
+    image:{
+        type:String
     }
 })
 
