@@ -12,6 +12,9 @@ const systemSchema = new schema({
     },
     phonenum:{
         type:Number
+    },
+    order:{
+        type:String
     }
 })
 

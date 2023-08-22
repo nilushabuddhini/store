@@ -24,10 +24,10 @@ const getSystem = async (req, res) => {
 
 const createSystem = async (req,res) => {
 
-    const {adress,idnum,phonenum} = req.body
+    const {adress,idnum,phonenum,order} = req.body
 
     try{
-       const back = await systemitems.create({adress,idnum,phonenum})
+       const back = await systemitems.create({adress,idnum,phonenum,order})
        res.status(200).json(back)
     }
     catch(error){

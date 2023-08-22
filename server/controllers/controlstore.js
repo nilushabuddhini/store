@@ -4,7 +4,7 @@ const { default:mongoose } = require('mongoose')
 
 const getitems = async (req,res) => {
 
-    const items = await details.find({})
+    const items = await details.find({}).sort({ createdAt:-1 })
 
     res.status(200).json(items)
 
@@ -30,11 +30,10 @@ const getitem = async (req,res) => {
 
 const createitem = async (req,res) => {
 
-    const {title,prize,description,phone,image} = req.body
+    const {title,prize,description,phone,image,createId} = req.body
 
     try {
-
-        const items = await details.create({title,prize,description,phone,image})
+        const items = await details.create({title,prize,description,phone,image,createId})
         res.status(200).json(items)
 
     }catch (error) {

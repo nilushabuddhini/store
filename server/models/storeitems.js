@@ -22,7 +22,11 @@ const details = new schema({
     },
     image:{
         type:String
+    },
+    createId:{
+        type:String
     }
-})
+  },{timestamps:true}
+)
 
 module.exports = mongoose.model('store', details)

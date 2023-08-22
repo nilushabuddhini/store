@@ -1,5 +1,9 @@
 const express =  require('express')
 
+const globalroutes = require('./routes/global')
+
+const path = require('path')
+
 const dotenv = require('dotenv').config()
 
 const { default:mongoose } = require('mongoose')
@@ -8,7 +12,7 @@ const storeroutes =  require('./routes/storeroutes')
 
 const systemroutes = require('./routes/system')
 
-const cors = require('cors')
+const userroutes = require('./routes/users')
 
 const app = express()
 
@@ -21,6 +25,8 @@ app.use('/',(req,res,next) => {
 
 app.use('/api/items', storeroutes)
 app.use('/api/system', systemroutes)
+app.use('/api/users', userroutes)
+app.use('/api/global', globalroutes)
 
 mongoose.connect(
     process.env.MONGOOSE
