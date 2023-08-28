@@ -4,23 +4,7 @@ const schema = mongoose.Schema
 
 const globalSchema = new schema({
 
-    title:{
-        type:String,
-        required:true
-    },
-    prize:{
-        type:Number,
-        required:true
-    },
-    description:{
-        type:String,
-        required:true
-    },
-    phone:{
-        type:Number,
-        required:true
-    },
-    image:{
+    statusItem:{
         type:String
     }
 },{timestamps:true}

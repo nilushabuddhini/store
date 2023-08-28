@@ -24,11 +24,11 @@ const getGlobal = async (req, res) => {
 
 const createGlobal = async (req,res) => {
 
-    const {title,prize,description,phone,image} = req.body
+    const {statusItem} = req.body
 
     try{
-       const back = await systemitems.create({title,prize,description,phone,image})
-       res.status(200).json(back)
+       const global = await systemitems.create({statusItem})
+       res.status(200).json(global)
     }
     catch(error){
         res.status(404).json({error:error.message})
