@@ -15,6 +15,15 @@ const systemSchema = new schema({
     },
     order:{
         type:String
+    },
+    img:{
+        type:String
+    },
+    title:{
+        type:String
+    },
+    phoneOrder:{
+        type:String
     }
 })
 
