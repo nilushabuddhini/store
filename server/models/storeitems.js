@@ -25,6 +25,10 @@ const details = new schema({
     },
     createId:{
         type:String
+    },
+    itemsLeft:{
+        type:String,
+        required:true
     }
   },{timestamps:true}
 )

@@ -30,10 +30,10 @@ const getitem = async (req,res) => {
 
 const createitem = async (req,res) => {
 
-    const {title,prize,description,phone,image,createId} = req.body
+    const {title,prize,description,phone,image,createId,itemsLeft} = req.body
 
     try {
-        const items = await details.create({title,prize,description,phone,image,createId})
+        const items = await details.create({title,prize,description,phone,image,createId,itemsLeft})
         res.status(200).json(items)
 
     }catch (error) {

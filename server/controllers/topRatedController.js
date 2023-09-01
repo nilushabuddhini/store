@@ -13,9 +13,9 @@ const getTop = async (req, res) => {
 }
 
 const createTop = async (req, res) => {
-    const {title,prize,description,phone,image} = req.body 
+    const {title,prize,description,phone,image,itemsLeft} = req.body 
     try {
-        const topRated = await TopRated.create({title,prize,description,phone,image})
+        const topRated = await TopRated.create({title,prize,description,phone,image,itemsLeft})
         res.status(200).json(topRated)
     } catch (error) {
         res.status(404).json({ error:error.message })

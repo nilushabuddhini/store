@@ -23,6 +23,10 @@ const topRatedSchema = new schema({
     image:{
         type:String,
         required:true
+    },
+    itemsLeft:{
+        type:String,
+        required:true
     }
 
 },{timestamps:true}

@@ -24,6 +24,10 @@ const systemSchema = new schema({
     },
     phoneOrder:{
         type:String
+    },
+    quantity:{
+        type:Number,
+        required:true
     }
 })
 
