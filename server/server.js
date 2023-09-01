@@ -16,6 +16,8 @@ const systemroutes = require('./routes/system')
 
 const userroutes = require('./routes/users')
 
+const toprated = require('./routes/topRated')
+
 const app = express()
 
 app.use(cors({
@@ -33,7 +35,7 @@ app.use('/',(req,res,next) => {
 app.use('/api/items', storeroutes)
 app.use('/api/system', systemroutes)
 app.use('/api/users', userroutes)
-app.use('/api/global', globalroutes)
+app.use('/api/toprated', toprated)
 
 mongoose.connect(
     process.env.MONGOOSE
