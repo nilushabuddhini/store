@@ -26,7 +26,14 @@ const details = new schema({
     createId:{
         type:String
     },
-    itemsLeft:{
+    itemsLeft:{ 
+        type:String,
+        required:true
+    },
+    category:{
+        type:String
+    },
+    user_id:{
         type:String,
         required:true
     }
